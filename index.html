@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Heart Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            position: relative;
+            margin: 0;
+            cursor: pointer;
+        }
+        .heart-container {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            transform-origin: center;
+            animation: heartbeat 1s infinite ease-in-out;
+            position: relative;
+            display: none; /* Ocultar el corazón inicialmente */
+        }
+        .pixel {
+            width: var(--size, 20px);
+            height: var(--size, 20px);
+            transition: background-color 1s;
+            position: relative;
+        }
+        .pixel.filled {
+            opacity: 0;
+            animation: fadeIn 1s infinite alternate;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        .ghost {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0.5;
+            transform-origin: center;
+            animation: ghostEffect 5s infinite ease-in-out;
+            filter: blur(5px);
+            display: none; /* Ocultar el efecto ghost inicialmente */
+        }
+        @keyframes ghostEffect {
+            0% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 0; transform: scale(1.3); }
+            100% { opacity: 0; transform: scale(1.5); }
+        }
+        .start-screen {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .start-screen h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .start-screen button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin: 0 10px;
+        }
+        .start-screen button#startButton {
+            background-color: #ff4081;
+        }
+        .start-screen button#startButton:hover {
+            background-color: #e91e63;
+        }
+        .start-screen button#noButton {
+            background-color: #757575;
+        }
+        .start-screen button#noButton:hover {
+            background-color: #616161;
+        }
+        .message {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="start-screen" id="startScreen">
+        <h1>te gustaria explorar  que tanto podemos amar?</h1>
+        <button id="startButton">Yes</button>
+        <button id="noButton">No</button>
+    </div>
+    <div class="heart-container" id="heart"></div>
+    <div class="message" id="message">¡Oh no! 😢</div>
+    <audio id="background-music" loop>
+        <source src="test1.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+    <script>
+        const heartPattern = [
+            [0,1,0,0,0,1,0],
+            [1,1,1,0,1,1,1],
+            [1,1,1,1,1,1,1],
+            [0,1,1,1,1,1,0],
+            [0,0,1,1,1,0,0],
+            [0,0,0,1,0,0,0]
+        ];
+        const heartContainer = document.getElementById('heart');
+        const audio = document.getElementById('background-music');
+        const startScreen = document.getElementById('startScreen');
+        const startButton = document.getElementById('startButton');
+        const noButton = document.getElementById('noButton');
+        const message = document.getElementById('message');
+        
+        let clickCount = 0; // Contador de clics en la pantalla
+        const audioFiles = ["b.mp3", "c.mp3", "d.mp3"]; // Archivos de audio
+
+        function getRandomColor() {
+            const r = Math.floor(Math.random() * 100 + 155);
+            const g = Math.floor(Math.random() * 50);
+            const b = Math.floor(Math.random() * 100 + 155);
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+        
+        function createHeart(size) {
+            document.documentElement.style.setProperty('--size', `${size}px`);
+            heartContainer.innerHTML = '';
+            
+            heartPattern.forEach(row => {
+                row.forEach(pixel => {
+                    const div = document.createElement('div');
+                    div.classList.add('pixel');
+                    if (pixel === 1) {
+                        div.classList.add('filled');
+                        div.style.backgroundColor = getRandomColor();
+                        setInterval(() => {
+                            div.style.backgroundColor = getRandomColor();
+                        }, 2000);
+                        div.style.animationDelay = `${Math.random()}s`;
+                    } else {
+                        div.style.opacity = '0';
+                        div.style.backgroundColor = 'transparent';
+                    }
+                    heartContainer.appendChild(div);
+                });
+            });
+            
+            // Crear el efecto ghost y mostrarlo
+            const ghost = heartContainer.cloneNode(true);
+            ghost.classList.add('ghost');
+            document.body.appendChild(ghost);
+            ghost.style.display = 'block'; // Mostrar el efecto ghost
+        }
+        
+        startButton.addEventListener('click', () => {
+            startScreen.style.display = 'none'; // Ocultar la pantalla inicial
+            heartContainer.style.display = 'grid'; // Mostrar el corazón
+            createHeart(30); // Crear el corazón con el tamaño deseado
+            audio.play().catch(error => {
+                console.log("La reproducción automática fue bloqueada. Haz clic para reproducir.");
+            });
+        });
+        
+        noButton.addEventListener('click', () => {
+            startScreen.style.display = 'none'; // Ocultar la pantalla inicial
+            message.style.display = 'block'; // Mostrar el mensaje "¡Oh no! 😢"
+        });
+
+        // Función para manejar los clics en cualquier lugar de la pantalla
+        document.body.addEventListener('click', () => {
+            if (startScreen.style.display === 'none') { // Solo funciona si la pantalla inicial está oculta
+                clickCount++; // Incrementar el contador de clics
+                if (clickCount <= 3) {
+                    // Reproducir el archivo de audio correspondiente
+                    const audio = new Audio(audioFiles[clickCount - 1]);
+                    audio.play();
+                } else if (clickCount === 4) {
+                    // Redirigir a next.html al cuarto clic
+                    window.location.href = "next.html";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
