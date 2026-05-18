@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Demo creativo de pagina web para venta de diseno web, servicios IT, servidores en la nube y punto de ventas."
+    />
+    <title>BitNube Labs | Web, Cloud, IT y Punto de Venta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="page-shell">
+      <header class="site-header" data-reveal>
+        <a class="brand" href="#inicio" aria-label="BitNube Labs inicio">
+          <span class="brand-mark">BN</span>
+          <span class="brand-copy">
+            <strong>BitNube Labs</strong>
+            <small>Web + Cloud + POS</small>
+          </span>
+        </a>
+        <nav class="main-nav" aria-label="Navegacion principal">
+          <a href="#servicios">Servicios</a>
+          <a href="#cloud">Cloud</a>
+          <a href="#pos">POS</a>
+          <a href="#cotizador">Cotizador</a>
+        </nav>
+        <a class="header-action" href="#contacto">
+          <span aria-hidden="true">+</span>
+          Iniciar proyecto
+        </a>
+      </header>
+
+      <main>
+        <section class="hero" id="inicio">
+          <canvas id="networkCanvas" aria-hidden="true"></canvas>
+          <div class="scanline" aria-hidden="true"></div>
+          <div class="hero-grid">
+            <div class="hero-content" data-reveal>
+              <p class="eyebrow">Infraestructura digital para negocios que venden todos los dias</p>
+              <h1>Dise&ntilde;o web, IT, nube y punto de venta en una sola experiencia.</h1>
+              <p class="hero-lede">
+                Creamos paginas veloces, servidores listos para crecer, soporte tecnico confiable y sistemas POS
+                conectados a reportes en tiempo real.
+              </p>
+              <div class="hero-actions">
+                <a class="primary-button magnetic" href="#cotizador">
+                  <span aria-hidden="true">></span>
+                  Armar demo
+                </a>
+                <a class="secondary-button magnetic" href="#servicios">
+                  Ver servicios
+                  <span aria-hidden="true">/</span>
+                </a>
+              </div>
+              <div class="signal-row" aria-label="Indicadores de servicio">
+                <span><strong data-count="99">0</strong>% uptime</span>
+                <span><strong data-count="24">0</strong>/7 monitoreo</span>
+                <span><strong data-count="3">0</strong> capas de seguridad</span>
+              </div>
+            </div>
+
+            <aside class="hero-console" aria-label="Consola visual de BitNube Labs" data-reveal>
+              <div class="console-topbar">
+                <span></span>
+                <span></span>
+                <span></span>
+                <strong>cloud-pos-node</strong>
+              </div>
+              <pre id="asciiRig" aria-label="ASCII art de nube, servidor y punto de venta"></pre>
+              <div class="console-feed" id="consoleFeed"></div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="service-band" id="servicios">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Oferta integral</p>
+            <h2>Todo lo que tu operacion digital necesita para verse, vender y escalar.</h2>
+          </div>
+          <div class="service-grid">
+            <article class="service-card tilt-card" data-service="web" data-reveal>
+              <span class="service-code">01</span>
+              <h3>Dise&ntilde;o de paginas web</h3>
+              <p>Sitios modernos, landing pages, tiendas, catalogos, formularios y dashboards con velocidad real.</p>
+              <ul>
+                <li>UI visual premium</li>
+                <li>SEO tecnico inicial</li>
+                <li>Integracion WhatsApp y CRM</li>
+              </ul>
+            </article>
+
+            <article class="service-card tilt-card" data-service="it" data-reveal>
+              <span class="service-code">02</span>
+              <h3>Servicio IT empresarial</h3>
+              <p>Soporte, mantenimiento, redes, backups, seguridad y monitoreo para equipos de trabajo.</p>
+              <ul>
+                <li>Helpdesk remoto</li>
+                <li>Auditoria de equipos</li>
+                <li>Planes preventivos</li>
+              </ul>
+            </article>
+
+            <article class="service-card tilt-card" data-service="cloud" data-reveal>
+              <span class="service-code">03</span>
+              <h3>Servidores en la nube</h3>
+              <p>VPS, correo, bases de datos, certificados, balanceo y despliegues con monitoreo.</p>
+              <ul>
+                <li>Linux / Windows Server</li>
+                <li>Backups automaticos</li>
+                <li>Escalado por demanda</li>
+              </ul>
+            </article>
+
+            <article class="service-card tilt-card" data-service="pos" data-reveal>
+              <span class="service-code">04</span>
+              <h3>Punto de ventas POS</h3>
+              <p>Caja, inventario, ventas, usuarios, reportes, impresoras y control multi-sucursal.</p>
+              <ul>
+                <li>Reportes diarios</li>
+                <li>Control de stock</li>
+                <li>Tickets e impresoras</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="cloud-stage" id="cloud">
+          <div class="cloud-copy" data-reveal>
+            <p class="eyebrow">Arquitectura cloud</p>
+            <h2>Tu sistema no vive en una sola maquina. Vive en una red preparada.</h2>
+            <p>
+              La propuesta combina servidor principal, backups, pasarelas de pago, dashboards y seguridad perimetral.
+              La pagina web y el POS comparten datos sin perder control.
+            </p>
+            <div class="metric-grid">
+              <div>
+                <strong data-count="12">0</strong>
+                <span>modulos listos</span>
+              </div>
+              <div>
+                <strong data-count="4">0</strong>
+                <span>rutas de backup</span>
+              </div>
+              <div>
+                <strong data-count="8">0</strong>
+                <span>alertas criticas</span>
+              </div>
+            </div>
+          </div>
+          <div class="cloud-visual" data-reveal>
+            <canvas id="architectureCanvas" aria-label="Visualizacion animada de arquitectura cloud"></canvas>
+            <div class="node-label node-web">WEB</div>
+            <div class="node-label node-api">API</div>
+            <div class="node-label node-db">DB</div>
+            <div class="node-label node-pos">POS</div>
+          </div>
+        </section>
+
+        <section class="pos-lab" id="pos">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Punto de venta</p>
+            <h2>Una caja visual, rapida y conectada a tu inventario.</h2>
+          </div>
+          <div class="pos-layout">
+            <div class="pos-screen" data-reveal>
+              <div class="pos-header">
+                <span>Terminal 01</span>
+                <strong id="posClock">00:00:00</strong>
+              </div>
+              <div class="product-list" id="productList" aria-label="Productos de ejemplo"></div>
+              <div class="pos-total">
+                <span>Total</span>
+                <strong id="posTotal">$0.00</strong>
+              </div>
+            </div>
+            <div class="workflow-panel" data-reveal>
+              <h3>Flujo operativo</h3>
+              <div class="workflow-step active">
+                <span>1</span>
+                <p>Venta en caja con productos, descuentos y usuario responsable.</p>
+              </div>
+              <div class="workflow-step">
+                <span>2</span>
+                <p>Inventario actualizado al instante por sucursal y almacen.</p>
+              </div>
+              <div class="workflow-step">
+                <span>3</span>
+                <p>Reporte automatico para gerencia, contador o propietario.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="builder" id="cotizador">
+          <div class="builder-panel" data-reveal>
+            <div class="section-heading compact">
+              <p class="eyebrow">Demo interactivo</p>
+              <h2>Arma un paquete comercial.</h2>
+            </div>
+            <div class="billing-toggle" role="group" aria-label="Tipo de contratacion">
+              <button class="active" type="button" data-billing="proyecto">Proyecto</button>
+              <button type="button" data-billing="mensual">Mensual</button>
+            </div>
+            <div class="builder-options" aria-label="Servicios para cotizacion demo">
+              <label>
+                <input type="checkbox" value="web" checked />
+                <span>Pagina web premium</span>
+              </label>
+              <label>
+                <input type="checkbox" value="cloud" checked />
+                <span>Servidor cloud</span>
+              </label>
+              <label>
+                <input type="checkbox" value="it" />
+                <span>Soporte IT</span>
+              </label>
+              <label>
+                <input type="checkbox" value="pos" checked />
+                <span>Punto de ventas</span>
+              </label>
+            </div>
+            <label class="range-field" for="branchRange">
+              <span>Sucursales</span>
+              <strong id="branchValue">2</strong>
+            </label>
+            <input id="branchRange" type="range" min="1" max="8" value="2" />
+          </div>
+
+          <aside class="quote-card" data-reveal>
+            <span class="quote-label">Paquete sugerido</span>
+            <h3 id="packageName">Nube Comercial</h3>
+            <p id="packageDescription">
+              Web de alto impacto, servidor administrado y POS listo para una operacion con varias cajas.
+            </p>
+            <div class="quote-price">
+              <span>Desde</span>
+              <strong id="quotePrice">$1,480</strong>
+            </div>
+            <a class="primary-button wide magnetic" href="#contacto">
+              <span aria-hidden="true">+</span>
+              Pedir propuesta
+            </a>
+          </aside>
+        </section>
+
+        <section class="contact-section" id="contacto">
+          <div class="contact-copy" data-reveal>
+            <p class="eyebrow">Activacion</p>
+            <h2>Convierte tu negocio en una plataforma digital.</h2>
+            <p>
+              Este demo esta preparado para presentar una marca de servicios tecnologicos con energia premium,
+              animacion y enfoque comercial.
+            </p>
+          </div>
+          <form class="contact-form" data-reveal>
+            <label>
+              Nombre
+              <input type="text" name="name" placeholder="Tu negocio" />
+            </label>
+            <label>
+              Servicio principal
+              <select name="service">
+                <option>Pagina web</option>
+                <option>Servicio IT</option>
+                <option>Servidor cloud</option>
+                <option>Punto de ventas</option>
+              </select>
+            </label>
+            <label>
+              Mensaje
+              <textarea name="message" rows="4" placeholder="Quiero una demo para mi empresa"></textarea>
+            </label>
+            <button class="primary-button wide" type="button">
+              <span aria-hidden="true">></span>
+              Enviar solicitud
+            </button>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
