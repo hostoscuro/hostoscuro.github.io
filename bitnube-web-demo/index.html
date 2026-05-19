@@ -5,288 +5,224 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Demo creativo de pagina web para venta de diseno web, servicios IT, servidores en la nube y punto de ventas."
+      content="Demo local de MorroShield para diseno web, IT Security, servidores cloud y punto de ventas protegido."
     />
-    <title>BitNube Labs | Web, Cloud, IT y Punto de Venta</title>
+    <title>MorroShield | Proteccion fuerte para tu mundo digital</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&family=Rajdhani:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="cursor-glow" aria-hidden="true"></div>
-    <div class="page-shell">
-      <header class="site-header" data-reveal>
-        <a class="brand" href="#inicio" aria-label="BitNube Labs inicio">
-          <span class="brand-mark">BN</span>
-          <span class="brand-copy">
-            <strong>BitNube Labs</strong>
-            <small>Web + Cloud + POS</small>
-          </span>
-        </a>
-        <nav class="main-nav" aria-label="Navegacion principal">
-          <a href="#servicios">Servicios</a>
-          <a href="#cloud">Cloud</a>
-          <a href="#pos">POS</a>
-          <a href="#cotizador">Cotizador</a>
-        </nav>
-        <a class="header-action" href="#contacto">
-          <span aria-hidden="true">+</span>
-          Iniciar proyecto
-        </a>
-      </header>
+    <div class="page-grid" aria-hidden="true"></div>
+    <header class="site-header" data-reveal>
+      <a class="brand" href="#inicio" aria-label="MorroShield inicio">
+        <img src="assets/morroshield-mark.png" alt="" />
+        <span>
+          <strong><b>Morro</b>Shield</strong>
+          <small>IT Security + Cloud</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Navegacion principal">
+        <a href="#defensa">Defensa</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#cloud">Cloud</a>
+        <a href="#pos">POS</a>
+      </nav>
+      <a class="header-action magnetic" href="#contacto">Blindar proyecto</a>
+    </header>
 
-      <main>
-        <section class="hero" id="inicio">
-          <canvas id="networkCanvas" aria-hidden="true"></canvas>
-          <div class="scanline" aria-hidden="true"></div>
-          <div class="hero-grid">
-            <div class="hero-content" data-reveal>
-              <p class="eyebrow">Infraestructura digital para negocios que venden todos los dias</p>
-              <h1>Dise&ntilde;o web, IT, nube y punto de venta en una sola experiencia.</h1>
-              <p class="hero-lede">
-                Creamos paginas veloces, servidores listos para crecer, soporte tecnico confiable y sistemas POS
-                conectados a reportes en tiempo real.
-              </p>
-              <div class="hero-actions">
-                <a class="primary-button magnetic" href="#cotizador">
-                  <span aria-hidden="true">></span>
-                  Armar demo
-                </a>
-                <a class="secondary-button magnetic" href="#servicios">
-                  Ver servicios
-                  <span aria-hidden="true">/</span>
-                </a>
-              </div>
-              <div class="signal-row" aria-label="Indicadores de servicio">
-                <span><strong data-count="99">0</strong>% uptime</span>
-                <span><strong data-count="24">0</strong>/7 monitoreo</span>
-                <span><strong data-count="3">0</strong> capas de seguridad</span>
-              </div>
-            </div>
-
-            <aside class="hero-console" aria-label="Consola visual de BitNube Labs" data-reveal>
-              <div class="console-topbar">
-                <span></span>
-                <span></span>
-                <span></span>
-                <strong>cloud-pos-node</strong>
-              </div>
-              <pre id="asciiRig" aria-label="ASCII art de nube, servidor y punto de venta"></pre>
-              <div class="console-feed" id="consoleFeed"></div>
-            </aside>
-          </div>
-        </section>
-
-        <section class="service-band" id="servicios">
-          <div class="section-heading" data-reveal>
-            <p class="eyebrow">Oferta integral</p>
-            <h2>Todo lo que tu operacion digital necesita para verse, vender y escalar.</h2>
-          </div>
-          <div class="service-grid">
-            <article class="service-card tilt-card" data-service="web" data-reveal>
-              <span class="service-code">01</span>
-              <h3>Dise&ntilde;o de paginas web</h3>
-              <p>Sitios modernos, landing pages, tiendas, catalogos, formularios y dashboards con velocidad real.</p>
-              <ul>
-                <li>UI visual premium</li>
-                <li>SEO tecnico inicial</li>
-                <li>Integracion WhatsApp y CRM</li>
-              </ul>
-            </article>
-
-            <article class="service-card tilt-card" data-service="it" data-reveal>
-              <span class="service-code">02</span>
-              <h3>Servicio IT empresarial</h3>
-              <p>Soporte, mantenimiento, redes, backups, seguridad y monitoreo para equipos de trabajo.</p>
-              <ul>
-                <li>Helpdesk remoto</li>
-                <li>Auditoria de equipos</li>
-                <li>Planes preventivos</li>
-              </ul>
-            </article>
-
-            <article class="service-card tilt-card" data-service="cloud" data-reveal>
-              <span class="service-code">03</span>
-              <h3>Servidores en la nube</h3>
-              <p>VPS, correo, bases de datos, certificados, balanceo y despliegues con monitoreo.</p>
-              <ul>
-                <li>Linux / Windows Server</li>
-                <li>Backups automaticos</li>
-                <li>Escalado por demanda</li>
-              </ul>
-            </article>
-
-            <article class="service-card tilt-card" data-service="pos" data-reveal>
-              <span class="service-code">04</span>
-              <h3>Punto de ventas POS</h3>
-              <p>Caja, inventario, ventas, usuarios, reportes, impresoras y control multi-sucursal.</p>
-              <ul>
-                <li>Reportes diarios</li>
-                <li>Control de stock</li>
-                <li>Tickets e impresoras</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section class="cloud-stage" id="cloud">
-          <div class="cloud-copy" data-reveal>
-            <p class="eyebrow">Arquitectura cloud</p>
-            <h2>Tu sistema no vive en una sola maquina. Vive en una red preparada.</h2>
-            <p>
-              La propuesta combina servidor principal, backups, pasarelas de pago, dashboards y seguridad perimetral.
-              La pagina web y el POS comparten datos sin perder control.
-            </p>
-            <div class="metric-grid">
-              <div>
-                <strong data-count="12">0</strong>
-                <span>modulos listos</span>
-              </div>
-              <div>
-                <strong data-count="4">0</strong>
-                <span>rutas de backup</span>
-              </div>
-              <div>
-                <strong data-count="8">0</strong>
-                <span>alertas criticas</span>
-              </div>
+    <main>
+      <section class="hero" id="inicio">
+        <canvas id="circuitCanvas" aria-hidden="true"></canvas>
+        <div class="hero-background" aria-hidden="true"></div>
+        <div class="hero-content" data-reveal>
+          <div class="hero-logo-lockup">
+            <img src="assets/morroshield-mark.png" alt="" />
+            <div>
+              <p class="eyebrow">Seguridad visual, cloud y operacion comercial</p>
+              <h1><span>Morro</span>Shield</h1>
             </div>
           </div>
-          <div class="cloud-visual" data-reveal>
-            <canvas id="architectureCanvas" aria-label="Visualizacion animada de arquitectura cloud"></canvas>
-            <div class="node-label node-web">WEB</div>
-            <div class="node-label node-api">API</div>
-            <div class="node-label node-db">DB</div>
-            <div class="node-label node-pos">POS</div>
-          </div>
-        </section>
-
-        <section class="pos-lab" id="pos">
-          <div class="section-heading" data-reveal>
-            <p class="eyebrow">Punto de venta</p>
-            <h2>Una caja visual, rapida y conectada a tu inventario.</h2>
-          </div>
-          <div class="pos-layout">
-            <div class="pos-screen" data-reveal>
-              <div class="pos-header">
-                <span>Terminal 01</span>
-                <strong id="posClock">00:00:00</strong>
-              </div>
-              <div class="product-list" id="productList" aria-label="Productos de ejemplo"></div>
-              <div class="pos-total">
-                <span>Total</span>
-                <strong id="posTotal">$0.00</strong>
-              </div>
-            </div>
-            <div class="workflow-panel" data-reveal>
-              <h3>Flujo operativo</h3>
-              <div class="workflow-step active">
-                <span>1</span>
-                <p>Venta en caja con productos, descuentos y usuario responsable.</p>
-              </div>
-              <div class="workflow-step">
-                <span>2</span>
-                <p>Inventario actualizado al instante por sucursal y almacen.</p>
-              </div>
-              <div class="workflow-step">
-                <span>3</span>
-                <p>Reporte automatico para gerencia, contador o propietario.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="builder" id="cotizador">
-          <div class="builder-panel" data-reveal>
-            <div class="section-heading compact">
-              <p class="eyebrow">Demo interactivo</p>
-              <h2>Arma un paquete comercial.</h2>
-            </div>
-            <div class="billing-toggle" role="group" aria-label="Tipo de contratacion">
-              <button class="active" type="button" data-billing="proyecto">Proyecto</button>
-              <button type="button" data-billing="mensual">Mensual</button>
-            </div>
-            <div class="builder-options" aria-label="Servicios para cotizacion demo">
-              <label>
-                <input type="checkbox" value="web" checked />
-                <span>Pagina web premium</span>
-              </label>
-              <label>
-                <input type="checkbox" value="cloud" checked />
-                <span>Servidor cloud</span>
-              </label>
-              <label>
-                <input type="checkbox" value="it" />
-                <span>Soporte IT</span>
-              </label>
-              <label>
-                <input type="checkbox" value="pos" checked />
-                <span>Punto de ventas</span>
-              </label>
-            </div>
-            <label class="range-field" for="branchRange">
-              <span>Sucursales</span>
-              <strong id="branchValue">2</strong>
-            </label>
-            <input id="branchRange" type="range" min="1" max="8" value="2" />
-          </div>
-
-          <aside class="quote-card" data-reveal>
-            <span class="quote-label">Paquete sugerido</span>
-            <h3 id="packageName">Nube Comercial</h3>
-            <p id="packageDescription">
-              Web de alto impacto, servidor administrado y POS listo para una operacion con varias cajas.
-            </p>
-            <div class="quote-price">
-              <span>Desde</span>
-              <strong id="quotePrice">$1,480</strong>
-            </div>
-            <a class="primary-button wide magnetic" href="#contacto">
-              <span aria-hidden="true">+</span>
-              Pedir propuesta
+          <p class="hero-tagline">Protecci&oacute;n fuerte para tu mundo digital.</p>
+          <p class="hero-copy">
+            Una web premium inspirada en ciberseguridad, con infraestructura cloud, soporte IT y punto de venta
+            preparado para negocios que necesitan vender sin perder control.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button magnetic" href="#servicios">
+              <span aria-hidden="true">01</span>
+              Ver propuesta
             </a>
-          </aside>
-        </section>
-
-        <section class="contact-section" id="contacto">
-          <div class="contact-copy" data-reveal>
-            <p class="eyebrow">Activacion</p>
-            <h2>Convierte tu negocio en una plataforma digital.</h2>
-            <p>
-              Este demo esta preparado para presentar una marca de servicios tecnologicos con energia premium,
-              animacion y enfoque comercial.
-            </p>
+            <a class="ghost-button magnetic" href="#defensa">Explorar sistema</a>
           </div>
-          <form class="contact-form" data-reveal>
-            <label>
-              Nombre
-              <input type="text" name="name" placeholder="Tu negocio" />
-            </label>
-            <label>
-              Servicio principal
-              <select name="service">
-                <option>Pagina web</option>
-                <option>Servicio IT</option>
-                <option>Servidor cloud</option>
-                <option>Punto de ventas</option>
-              </select>
-            </label>
-            <label>
-              Mensaje
-              <textarea name="message" rows="4" placeholder="Quiero una demo para mi empresa"></textarea>
-            </label>
-            <button class="primary-button wide" type="button">
-              <span aria-hidden="true">></span>
-              Enviar solicitud
-            </button>
-          </form>
-        </section>
-      </main>
-    </div>
+          <div class="hero-metrics" aria-label="Indicadores de MorroShield">
+            <span><strong data-count="99">0</strong>% disponibilidad</span>
+            <span><strong data-count="24">0</strong>/7 vigilancia</span>
+            <span><strong data-count="4">0</strong> capas de defensa</span>
+          </div>
+        </div>
+        <aside class="security-orbit" aria-label="Escudo visual de MorroShield" data-reveal>
+          <div class="shield-frame">
+            <img src="assets/morroshield-mark.png" alt="Logo MorroShield" />
+            <span class="packet packet-a"></span>
+            <span class="packet packet-b"></span>
+            <span class="packet packet-c"></span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="defense-band" id="defensa">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Identidad MorroShield</p>
+          <h2>Dise&ntilde;o claro, tecnolog&iacute;a seria y una marca que comunica defensa.</h2>
+          <p>
+            La nueva direccion visual toma el faro, la nube, el escudo y los circuitos de la referencia para crear una
+            experiencia limpia, luminosa y confiable.
+          </p>
+        </div>
+        <div class="identity-strip" data-reveal>
+          <img src="assets/morroshield-banner.jpg" alt="Arte principal MorroShield" />
+          <div class="identity-points">
+            <span>Azul profundo</span>
+            <span>Cian digital</span>
+            <span>Blanco tecnico</span>
+            <span>Lineas de circuito</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="services-section" id="servicios">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Servicios blindados</p>
+          <h2>Cuatro frentes para lanzar, proteger y operar tu negocio.</h2>
+        </div>
+        <div class="service-grid">
+          <article class="service-card tilt-card" data-reveal>
+            <span class="service-index">01</span>
+            <h3>Dise&ntilde;o web seguro</h3>
+            <p>Landing pages, cat&aacute;logos y sitios comerciales con estetica MorroShield, velocidad y formularios protegidos.</p>
+            <ul>
+              <li>UI premium responsive</li>
+              <li>SEO tecnico inicial</li>
+              <li>Captura de leads segura</li>
+            </ul>
+          </article>
+          <article class="service-card tilt-card" data-reveal>
+            <span class="service-index">02</span>
+            <h3>Servicio IT Security</h3>
+            <p>Soporte remoto, hardening, auditoria basica, antivirus, usuarios, redes y continuidad operativa.</p>
+            <ul>
+              <li>Helpdesk y monitoreo</li>
+              <li>Politicas de acceso</li>
+              <li>Backups verificados</li>
+            </ul>
+          </article>
+          <article class="service-card tilt-card" data-reveal>
+            <span class="service-index">03</span>
+            <h3>Servidores cloud</h3>
+            <p>VPS, correo corporativo, certificados, bases de datos y despliegues administrados con alertas.</p>
+            <ul>
+              <li>Linux / Windows Server</li>
+              <li>SSL y firewall</li>
+              <li>Escalado por demanda</li>
+            </ul>
+          </article>
+          <article class="service-card tilt-card" data-reveal>
+            <span class="service-index">04</span>
+            <h3>Punto de venta protegido</h3>
+            <p>POS con caja, inventario, reportes, impresoras y control multi-sucursal para venta diaria.</p>
+            <ul>
+              <li>Usuarios por rol</li>
+              <li>Stock en tiempo real</li>
+              <li>Reportes gerenciales</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="cloud-section" id="cloud">
+        <div class="cloud-copy" data-reveal>
+          <p class="eyebrow">Arquitectura azul</p>
+          <h2>Cloud, web y POS conectados en una ruta defendida.</h2>
+          <p>
+            El demo muestra una arquitectura comercial donde la web captura clientes, el cloud procesa datos y el POS
+            mantiene control de ventas e inventario.
+          </p>
+          <div class="metric-wall">
+            <div><strong data-count="7">0</strong><span>controles activos</span></div>
+            <div><strong data-count="3">0</strong><span>zonas cloud</span></div>
+            <div><strong data-count="12">0</strong><span>alertas listas</span></div>
+          </div>
+        </div>
+        <div class="architecture-panel" data-reveal>
+          <canvas id="shieldCanvas" aria-label="Mapa animado de arquitectura MorroShield"></canvas>
+          <div class="arch-node arch-web">WEB</div>
+          <div class="arch-node arch-api">API</div>
+          <div class="arch-node arch-pos">POS</div>
+          <div class="arch-node arch-db">DB</div>
+        </div>
+      </section>
+
+      <section class="pos-section" id="pos">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Venta protegida</p>
+          <h2>Terminal POS con inventario, roles y cierre diario.</h2>
+        </div>
+        <div class="pos-layout">
+          <div class="pos-terminal" data-reveal>
+            <div class="terminal-head">
+              <span>MorroPOS / Caja 01</span>
+              <strong id="posClock">00:00:00</strong>
+            </div>
+            <div id="productList" class="product-list" aria-label="Productos demo"></div>
+            <div class="terminal-total">
+              <span>Total seguro</span>
+              <strong id="posTotal">$0</strong>
+            </div>
+          </div>
+          <div class="console-panel" data-reveal>
+            <div class="console-top">
+              <span></span>
+              <span></span>
+              <span></span>
+              <strong>morroshield.audit</strong>
+            </div>
+            <pre id="asciiShield" aria-label="ASCII art MorroShield"></pre>
+            <div class="console-feed" id="consoleFeed"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="builder-section" id="contacto">
+        <div class="builder-panel" data-reveal>
+          <p class="eyebrow">Demo de paquete</p>
+          <h2>Arma una propuesta MorroShield.</h2>
+          <div class="option-grid" aria-label="Servicios para cotizacion demo">
+            <label><input type="checkbox" value="web" checked /> Web segura</label>
+            <label><input type="checkbox" value="security" checked /> IT Security</label>
+            <label><input type="checkbox" value="cloud" checked /> Cloud server</label>
+            <label><input type="checkbox" value="pos" /> POS protegido</label>
+          </div>
+          <label class="range-field" for="branchRange">
+            <span>Sucursales</span>
+            <strong id="branchValue">2</strong>
+          </label>
+          <input id="branchRange" type="range" min="1" max="8" value="2" />
+        </div>
+        <aside class="quote-panel" data-reveal>
+          <img src="assets/morroshield-mark.png" alt="" />
+          <span>Paquete sugerido</span>
+          <h3 id="packageName">Shield Commerce</h3>
+          <p id="packageDescription">Web, seguridad IT y cloud administrado para una operacion digital confiable.</p>
+          <strong id="quotePrice">$1,890</strong>
+          <a class="primary-button magnetic" href="mailto:correo@morroshield.com">Solicitar demo</a>
+        </aside>
+      </section>
+    </main>
 
     <script src="script.js"></script>
   </body>
